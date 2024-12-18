@@ -1,81 +1,128 @@
-<template>
+<!-- 
 
+  <template>
+    <a name="contact"></a>
+    <v-container fluid>
+      <v-row>
 
-    <v-container>
-        <h4 class="text-h4 text-center mb-1">Contact Me</h4>
-        <v-form ref="form" v-model="valid" lazy-validation action="" method="POST">
-            <input>
-            <v-text-field v-model="name" :counter="25" :rules="nameRules" label="Name" type="name" name="Name" required>
-            </v-text-field>
-
-            <v-text-field class="mt-n3" v-model="email" :rules="emailRules" label="E-mail" type="email" name="E-mail"
-                required></v-text-field>
-
-            <v-select class="mt-n3" v-model="select" :items="items" :rules="[v => !!v || 'You have to choice!']"
-                label="What are you contacting for?" required name="Subject">
-            </v-select>
-
-            <v-text-field class="mt-n3" v-model="message" :counter="225" :rules="messageRules" name="Message"
-                label="Message (Explain what you want)" required></v-text-field>
-
-            <v-checkbox class="mt-n8" v-model="checkbox" :rules="[v => !!v || 'You must agree to send form!']"
-                label="Do you agree?" required></v-checkbox>
-            <div class="d-flex justify-center mt-n8">
-
-                <v-btn :disabled="!valid" color="bblue2" class="mr-4" @click="submit" type="submit">
-                    Submit
-                </v-btn>
-
-                <v-btn color="error" class="mr-4" @click="reset">
-                    Reset Form
-                </v-btn>
+        <v-col cols="12" md="6" class="right-section pa-4">
+          <v-card class="right_section" flat>
+            <div class="left--section">
+              <br>
+              <h2 class="mb-2 font-weight-bold c-text">Contact Information</h2>
+              <h4 class="grey--text">We're open for any suggestion or just to have a chat</h4>
+              <br><br>
+              <h4 class="mb-2 font-weight-bold c-text">Address: <h5 class="grey--text">Buenavista, Butuan City, Philippines, 8601</h5></h4><br>
+              <h4 class="mb-2 font-weight-bold c-text">Phone: <h5 class="grey--text">+639 3612345678</h5></h4><br>
+              <h4 class="mb-2 font-weight-bold c-text">Email: <h5 class="grey--text">alriecraig@gmail.com</h5></h4><br>
+              <h4 class="mb-2 font-weight-bold c-text">Facebook: <h5 class="grey--text">https://www.facebook.com/rie.rhie.1</h5></h4><br><br><br>
             </div>
-        </v-form>
+          </v-card>
+        </v-col>
+      </v-row>
     </v-container>
+  </template>
+  
+  <style scoped>
+  .left--section {
+    color: #333;
+  }
+  .right-section {
+    background-color: #c00472;
+    margin-top: 60px;
+    display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  height: 100vh; /* Full height of viewport */
+  }
+  .right_section {
+    background-color: #333;
+  }
+  .font-weight-bold {
+    font-weight: bold !important;
+  }
+  .grey--text {
+    color: #757575 !important;
+  }
+  .c-text {
+    color: white;
+  }
+  .v-text-field input {
+    font-size: 16px;
+  }
+  .button {
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  </style>
 
-</template>
+   -->
 
 
-
-<script>
-export default {
-    name: "SiteContact",
-    data: () => ({
-        valid: true,
-        name: '',
-        nameRules: [
-            v => !!v || 'Name is required!',
-            v => (v && v.length <= 25) || 'Name must be less than 25 characters',
-        ],
-        email: '',
-        emailRules: [
-            v => !!v || 'E-mail is required!',
-            v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
-        ],
-        select: null,
-        items: [
-            'Lorem ipsum dolor sit amet.',
-            'Lorem ipsum dolor sit amet.',
-            'Lorem ipsum dolor sit amet.',
-            'Lorem ipsum dolor sit amet.',
-        ],
-        checkbox: false,
-        // valid: true,
-        message: '',
-        messageRules: [
-            i => !!i || 'Message is required!',
-            i => (i && i.length <= 225) || 'Message must be less than 225 characters',
-        ],
-    }),
-
-    methods: {
-        submit() {
-            this.$refs.form.submit()
-        },
-        reset() {
-            this.$refs.form.reset()
-        },
-    },
-}
-</script>
-
+   <template>
+    <a name="contact"></a>
+    <v-container fluid>
+      <v-row justify="center" align="center" style="height: 100vh;">
+        <!-- Contact Information Section -->
+        <v-col cols="12" md="6" class="right-section pa-4">
+          <v-card class="right_section" flat>
+            <div class="left--section">
+              <br>
+              <h2 class="mb-2 font-weight-bold c-text">Contact Information</h2>
+              <h4 class="grey--text">We're open for any suggestion or just to have a chat</h4>
+              <br><br>
+              <h4 class="mb-2 font-weight-bold c-text">Address:</h4>
+              <h5 class="grey--text">Buenavista, Butuan City, Philippines, 8601</h5>
+              <br>
+              <h4 class="mb-2 font-weight-bold c-text">Phone:</h4>
+              <h5 class="grey--text">+639 3612345678</h5>
+              <br>
+              <h4 class="mb-2 font-weight-bold c-text">Email:</h4>
+              <h5 class="grey--text">alriecraig@gmail.com</h5>
+              <br>
+              <h4 class="mb-2 font-weight-bold c-text">Facebook:</h4>
+              <h5 class="grey--text">https://www.facebook.com/rie.rhie.1</h5>
+              <br><br><br>
+            </div>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </template>
+  
+  <style scoped>
+  .left--section {
+    color: #333;
+  }
+  .right-section {
+    background-color: #c00472;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+  }
+  .right_section {
+    background-color: #333;
+  }
+  .font-weight-bold {
+    font-weight: bold !important;
+  }
+  .grey--text {
+    color: #757575 !important;
+  }
+  .c-text {
+    color: white;
+  }
+  .v-text-field input {
+    font-size: 16px;
+  }
+  .button {
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  </style>
+  
